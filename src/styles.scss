@@ -10,7 +10,7 @@ body {
     overflow-y: auto;
 
     &::-webkit-scrollbar {
-        width: 3px;
+        width: 4px;
     }
 
     &::-webkit-scrollbar-track {
@@ -18,10 +18,10 @@ body {
     }
 
     &::-webkit-scrollbar-thumb {
-        background: #888;
+        background: #2c3a55;
     }
 
     &::-webkit-scrollbar-thumb:hover {
-        background: #555;
+        background: #30456e;
     }
 }
