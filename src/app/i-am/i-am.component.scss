@@ -1,0 +1,116 @@
+.i-am-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.profile-image-container {
+    height: 705px;
+
+    img {
+        height: 100%;
+    }
+}
+
+.profile-container {
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.profile-description-container {
+    display: flex;
+    align-items: center;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.i-am-text {
+    rotate: 270deg;
+    font-size: 64px;
+}
+
+.name-text {
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.frontend-text {
+    font-size: 58px;
+    color: #FF4747;
+}
+
+.lets-talk-button {
+    font-size: 23px;
+    background-color: #FA7902;
+    width: 165px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #FF4747;
+        transform: scale(1.15);
+    }
+}
+
+.contact-links-container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 37.42px;
+    position: relative;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.link-line {
+    width: 100px;
+    height: 0;
+    display: flex;
+    border: 2px solid #FF4747;
+}
+
+.scroll-container {
+    rotate: 90deg;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+
+    div {
+        rotate: 270deg;
+    }
+}
+
+.background-position {
+    position: absolute;
+    top: 200px;
+    height: 1080px;
+    width: 100%;
+}
+
+.background-curved {
+    background-image: url('^assets/img/curved-BG.png');
+    height: 1080px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
