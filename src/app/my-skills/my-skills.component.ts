@@ -18,5 +18,5 @@ export class MySkillsComponent {
     "Rest-Api",
     "Scrum",
     "Material Design"
-  ]
+  ];
 }

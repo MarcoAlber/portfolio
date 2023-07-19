@@ -63,12 +63,9 @@
 .lets-talk-button {
     font-size: 23px;
     background-color: #FA7902;
-    width: 165px;
-    height: 58px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 15px 30px;
     border-radius: 10px;
+    line-height: 27.6px;
     transition: all 225ms ease-in-out;
 
     &:hover {

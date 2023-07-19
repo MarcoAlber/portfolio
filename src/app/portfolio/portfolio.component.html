@@ -1,0 +1,32 @@
+<div class="portfolio-headline-container">
+    <div class="portfolio-headline-line-left"></div>
+    <span>Portfolio</span>
+    <div class="portfolio-headline-line-right"></div>
+</div>
+<span class="portfolio-text">This page is a sample of my work - please feel free to try them out.</span>
+<div class="all-projects-container">
+    <div *ngFor="let project of projects; let i = index">
+        <div class="portfolio-project-container" [ngStyle]="{ 'flex-direction': i % 2 !== 0 ? 'row-reverse' : 'row' }">
+            <div class="project-image-container"><img src="assets/img/{{ project.image }}"></div>
+            <div class="project-text-container">
+                <div class="project-text">
+                    <span class="project-name">{{ project.name }}</span>
+                    <span class="project-languages">{{ project.languages }}</span>
+                    <span class="project-description">{{ project.description }}</span>
+                </div>
+                <div class="project-buttons-container">
+                    <div class="live-test" [ngStyle]="{ 'display': project.name === 'My website' ? 'none' : 'flex' }">
+                        <a href="{{ project.url }}" target="_blank">
+                            <span>Live test</span>
+                        </a>
+                    </div>
+                    <div class="github">
+                        <a href="{{ project.github }}" target="_blank">
+                            <span>Github</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
