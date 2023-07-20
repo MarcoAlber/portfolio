@@ -1,0 +1,114 @@
+.contact-container {
+    margin-top: 243px;
+}
+
+.contact-headline-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .contact-line {
+        width: 50px;
+        border: 2px solid #FF4747;
+    }
+
+    span {
+        font-weight: 700;
+        font-size: 90px;
+        line-height: 108px;
+    }
+}
+
+.text-form-container {
+    display: flex;
+    justify-content: space-between;
+    height: 465px;
+    margin: 100px 100px 0;
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        width: 473px;
+
+        .text-headline {
+            font-weight: 700;
+            font-size: 32px;
+        }
+
+        .contact-me-text {
+            margin: 35px 0 25px;
+        }
+    }
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 617px;
+
+    input,
+    textarea {
+        background-color: unset;
+        border: 1px solid #FF4747;
+        border-radius: 10px;
+        padding: 15px 25px;
+        resize: none;
+        color: white;
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 400;
+        transition: all 225ms ease-in-out;
+
+        &:hover {
+            border: 1px solid #FA7902;
+            transition: all 225ms ease-in-out;
+        }
+
+        &::placeholder {
+            color: white;
+        }
+    }
+}
+
+.form-button-container {
+    display: flex;
+    justify-content: center;
+
+
+    .form-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 253px;
+        height: 58px;
+        border-radius: 10px;
+        background-color: #FA7902;
+        font-size: 23px;
+        line-height: 27.6px;
+        transition: all 225ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #FF4747;
+            transition: all 225ms ease-in-out;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.go-up-button {
+    position: absolute;
+    right: 100px;
+    margin-top: 90px;
+
+    img {
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            filter: invert(53%) sepia(11%) saturate(5732%) hue-rotate(356deg) brightness(97%) contrast(103%);
+            transition: all 125ms ease-in-out;
+        }
+    }
+}
