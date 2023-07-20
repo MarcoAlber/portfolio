@@ -1,5 +1,11 @@
 header {
-    padding: 37px 100px 37px 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #141D2F;
+    padding: 37px 100px;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
 }
@@ -10,6 +16,19 @@ header {
     cursor: pointer;
     font-size: 24px;
     font-weight: 600;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .a-letter {
+        color: #FA7902;
+    }
+
+    .b-letter {
+        color: #FF4747;
+    }
 }
 
 .menu-links {
