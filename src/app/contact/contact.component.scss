@@ -1,5 +1,6 @@
 .contact-container {
-    margin-top: 243px;
+    margin-top: 134px;
+    padding-top: 109px;
 }
 
 .contact-headline-container {
@@ -9,7 +10,8 @@
 
     .contact-line {
         width: 50px;
-        border: 2px solid #FF4747;
+        border-top: 2px solid #FF4747;
+        border-bottom: 2px solid #FF4747;
     }
 
     span {
@@ -41,7 +43,7 @@
     }
 }
 
-.form-container {
+.form-container form {
     display: flex;
     flex-direction: column;
     gap: 35px;
@@ -74,24 +76,48 @@
 .form-button-container {
     display: flex;
     justify-content: center;
+}
 
-    .form-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 253px;
-        height: 58px;
-        border-radius: 10px;
-        background-color: #FA7902;
-        font-size: 23px;
-        line-height: 27.6px;
+.form-button {
+    border-radius: 10px;
+    background-color: #FA7902;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 23px;
+    padding: 0;
+    width: 253px;
+    height: 58px;
+    transition: all 0.5s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #FF4747;
         transition: all 225ms ease-in-out;
 
-        &:hover {
-            cursor: pointer;
-            background-color: #FF4747;
-            transition: all 225ms ease-in-out;
-            transform: scale(1.1);
+        span {
+            padding-right: 25px;
+        }
+
+        span:after {
+            opacity: 1;
+            right: 0;
+        }
+    }
+
+    span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+
+        &::after {
+            content: ':)';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
         }
     }
 }

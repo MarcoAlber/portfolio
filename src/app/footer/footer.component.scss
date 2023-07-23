@@ -61,9 +61,11 @@
     font-size: 20px;
     transition: all 225ms ease-in-out;
 
-    &:hover {
-        cursor: pointer;
-        text-decoration: underline solid #FF4747 3px;
-        transition: all 225ms ease-in-out;
+    span {
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline solid #FF4747 3px;
+            transition: all 225ms ease-in-out;
+        }
     }
 }

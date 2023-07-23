@@ -21,7 +21,7 @@
     gap: 10px;
 
     &:hover img {
-        animation: myAnim 1.15s ease 0s 1 normal forwards;
+        animation: jumping 1.15s ease 0s 1 normal forwards;
     }
 
     img {
@@ -60,7 +60,8 @@
     position: absolute;
     right: 0;
     width: 58px;
-    border: 2px solid #FF4747;
+    border-top: 2px solid #FF4747;
+    border-bottom: 2px solid #FF4747;
 }
 
 .my-skills-text {
@@ -97,7 +98,7 @@
     }
 }
 
-@keyframes myAnim {
+@keyframes jumping {
     0% {
         animation-timing-function: ease-in;
         transform: translateY(-15px);
@@ -134,5 +135,85 @@
     100% {
         animation-timing-function: ease-out;
         transform: translateY(0px);
+    }
+}
+
+@media(max-width: 1225px) {
+    .my-skills-images-container {
+        width: 600px;
+    }
+}
+
+@media(max-width: 1140px) {
+    .my-skills-headline-container {
+        span {
+            font-size: 70px;
+            line-height: 85px;
+        }
+    }
+
+    .my-skills-images-container {
+        width: 500px;
+        gap: 54px calc((100% / 8));
+    }
+}
+
+@media (orientation: portrait),
+(orientation: landscape) and (max-width: 900px) {
+    .my-skills-container {
+        position: relative;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        margin: 0 25px;
+        padding-top: 109px;
+    }
+
+    .my-skills-text-container {
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    .my-skills-button {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .my-skills-skill-container {
+        width: 62px;
+        font-size: 14px;
+
+        img {
+            height: 45px;
+        }
+    }
+
+    .my-skills-headline-container {
+        margin-right: -25px;
+        gap: 5px;
+
+        span {
+            font-size: 65px;
+            line-height: 68px;
+        }
+    }
+
+    .my-skills-text {
+        margin-right: 0;
+    }
+
+    .my-skills-line {
+        position: unset;
+        width: 20px;
+    }
+
+    .my-skills-images-container {
+        margin-top: 35px;
+        margin-bottom: 116px;
+        width: 100%;
+        justify-content: center;
+        gap: 54px calc((100% / 5));
     }
 }

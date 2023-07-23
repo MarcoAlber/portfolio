@@ -32,7 +32,6 @@ header {
 }
 
 .menu-links {
-    width: 360px;
     display: flex;
     gap: 46px;
 
@@ -47,5 +46,25 @@ header {
             transition: all 225ms ease-in-out;
             color: #FA7902;
         }
+    }
+}
+
+@media (orientation: portrait) {
+    header {
+        padding: 37px 25px;
+    }
+
+    .menu-links {
+        display: none;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+    header {
+        padding: 37px 25px;
+    }
+
+    .menu-links {
+        display: none;
     }
 }

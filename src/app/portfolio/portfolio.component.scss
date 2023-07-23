@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     gap: 36px;
-    margin-left: calc(50% - 108px - 36px - 109px);
+    margin-right: 145px;
 
     span {
         font-weight: 700;
@@ -16,12 +16,16 @@
 
 .portfolio-headline-line-left {
     width: 109px;
-    border: 2px solid #FF4747;
+    border-top: 2px solid #FF4747;
+    border-bottom: 2px solid #FF4747;
 }
 
 .portfolio-headline-line-right {
-    width: 100%;
-    border: 2px solid #FF4747;
+    position: absolute;
+    right: 0;
+    width: calc(50% - 194.5px - 36px);
+    border-top: 2px solid #FF4747;
+    border-bottom: 2px solid #FF4747;
 }
 
 .portfolio-text {
@@ -39,7 +43,7 @@
 .portfolio-project-container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin: 0 100px;
 }
 
