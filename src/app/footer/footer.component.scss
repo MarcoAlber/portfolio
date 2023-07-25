@@ -69,3 +69,39 @@
         }
     }
 }
+
+.footer-imprint-responsive {
+    display: none;
+}
+
+@media (orientation: portrait),
+(orientation: landscape) and (max-width: 900px) {
+    .footer-container-main {
+        flex-direction: column;
+        height: 75%;
+    }
+
+    .footer-container {
+        padding: 0 25px;
+        margin-top: 49px;
+        height: 380px;
+    }
+
+    .footer-imprint-responsive {
+        display: block;
+        font-size: 20px;
+        transition: all 225ms ease-in-out;
+
+        span {
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline solid #FF4747 3px;
+                transition: all 225ms ease-in-out;
+            }
+        }
+    }
+
+    .footer-imprint {
+        display: none;
+    }
+}
