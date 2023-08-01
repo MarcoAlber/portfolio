@@ -1,7 +1,7 @@
 <div class="footer-container">
     <div class="footer-container-main">
         <div class="footer-logo">
-            <a href="#">
+            <a routerLink="/">
                 <span>&lt;/&gt; M<span class="a-letter">a</span>rco Al<span class="b-letter">b</span>er</span>
             </a>
         </div>
@@ -11,7 +11,9 @@
             <a href="mailto:m.alber@onlinehome.de"><img src="assets/img/email_button.png"></a>
             <a href="#"><img src="assets/img/linkedin_button.png"></a>
         </div>
-        <div class="footer-imprint-responsive"><span>Imprint</span> | <span>Privacy policy</span></div>
+        <div class="footer-imprint-responsive"><span (click)="goUp()" routerLink="/imprint">Imprint</span> | <span
+                (click)="goUp()" routerLink="/privacy-policy">Privacy policy</span></div>
     </div>
-    <div class="footer-imprint"><span>Imprint</span> | <span>Privacy policy</span></div>
+    <div class="footer-imprint"><span (click)="goUp()" routerLink="/imprint">Imprint</span> | <span (click)="goUp()"
+            routerLink="/privacy-policy">Privacy policy</span></div>
 </div>

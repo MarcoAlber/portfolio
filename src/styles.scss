@@ -12,7 +12,11 @@ body {
     overflow-y: auto;
 
     &::-webkit-scrollbar {
-        width: 4px;
+        width: 10px;
+
+        @media(max-width: 1000px) {
+            width: 4px;
+        }
     }
 
     &::-webkit-scrollbar-track {

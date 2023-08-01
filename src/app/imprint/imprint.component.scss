@@ -1,0 +1,16 @@
+a {
+    color: white;
+}
+
+.imprint-container {
+    padding: 149px 100px 0;
+
+    @media (orientation: portrait),
+    (orientation: landscape) and (max-width: 900px) {
+        padding: 149px 25px 0;
+    }
+}
+
+.contact-container a {
+    text-decoration: none !important;
+}
