@@ -1,4 +1,5 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -6,37 +7,50 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  @ViewChild('myForm') myForm!: ElementRef;
-  @ViewChild('nameField') nameField!: ElementRef;
-  @ViewChild('mailField') mailField!: ElementRef;
-  @ViewChild('messageField') messageField!: ElementRef;
-  @ViewChild('buttonField') buttonField!: ElementRef;
+  formSending = false;
+  alreadySend = false;
 
-  async sendMail() {
-    let nameField = this.nameField.nativeElement;
-    let mailField = this.mailField.nativeElement;
-    let messageField = this.messageField.nativeElement;
-    let buttonField = this.buttonField.nativeElement;
+  contactForm = new FormGroup({
+    nameInput: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    emailInput: new FormControl('', [Validators.required, Validators.email]),
+    messageTextarea: new FormControl('', [Validators.required, Validators.minLength(10)])
+  });
 
-    nameField.disabled = true;
-    mailField.disabled = true;
-    messageField.disabled = true;
-    buttonField.disabled = true;
+  sendMail() {
+    let nameField: any = this.contactForm.controls['nameInput'];
+    let mailField: any = this.contactForm.controls['emailInput'];
+    let messageField: any = this.contactForm.controls['messageTextarea'];
 
-    let fd = new FormData();
-    fd.append('name', nameField.value);
-    fd.append('mail', mailField.value);
-    fd.append('message', messageField.value);
+    this.contactForm.disable();
 
+    let formData = new FormData();
+    formData.append('name', nameField.value);
+    formData.append('mail', mailField.value);
+    formData.append('message', messageField.value);
+    this.sendData(formData);
+
+    this.resetContactForm();
+    this.confirmationMessage();
+  }
+
+  async sendData(formData: FormData) {
     await fetch('https://marco-alber.developerakademie.net/portfolio/send_mail/send_mail.php',
       {
         method: "post",
-        body: fd
+        body: formData
       });
+  }
 
-    nameField.disabled = false;
-    mailField.disabled = false;
-    messageField.disabled = false;
-    buttonField.disabled = false;
+  resetContactForm() {
+    this.contactForm.reset();
+    this.contactForm.enable();
+  }
+
+  confirmationMessage() {
+    this.formSending = true;
+    this.alreadySend = true;
+    setTimeout(() => {
+      this.formSending = false;
+    }, 2500);
   }
 }

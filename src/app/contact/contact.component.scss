@@ -49,18 +49,41 @@
     gap: 35px;
     width: 617px;
 
+    .input-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .required-informations {
+        position: absolute;
+        bottom: -28px;
+        color: #FF4747;
+        font-size: 14px;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus {
+        transition: background-color 0s 600000s, color 0s 600000s;
+    }
+
     input,
     textarea {
         background-color: unset;
         border: 1px solid #FF4747;
         border-radius: 10px;
-        padding: 15px 25px;
+        padding: 15px 45px 15px 25px;
         resize: none;
         color: white;
+        outline: none;
         font-family: 'Poppins';
         font-size: 16px;
         font-weight: 400;
         transition: all 225ms ease-in-out;
+
+        &:focus {
+            border: 1px solid #FA7902;
+        }
 
         &:hover {
             border: 1px solid #FA7902;
@@ -71,6 +94,55 @@
             color: white;
         }
     }
+}
+
+.green-border {
+    border-color: #70E61C !important;
+}
+
+button:disabled,
+button[disabled] {
+    cursor: not-allowed !important;
+    opacity: 0.5;
+
+    &:hover {
+        background-color: #FA7902;
+    }
+
+    span {
+        padding-right: 0 !important;
+
+        &::after {
+            content: '';
+            right: 0 !important;
+        }
+    }
+}
+
+textarea {
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #2c3a55;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f1c2;
+    }
+}
+
+.warning-image,
+.check-image {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: -1;
 }
 
 .form-button-container {
@@ -106,7 +178,6 @@
     }
 
     span {
-        cursor: pointer;
         display: inline-block;
         position: relative;
         transition: 0.5s;
@@ -139,6 +210,45 @@
             filter: invert(53%) sepia(11%) saturate(5732%) hue-rotate(356deg) brightness(97%) contrast(103%);
             transition: all 125ms ease-in-out;
         }
+    }
+}
+
+.confirmation-message-in {
+    position: fixed;
+    z-index: 2;
+    left: calc(50% - 150px);
+    bottom: 30px;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #FA7902;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: confirmationMessageIn 0.5s forwards;
+}
+
+.confirmation-message-out {
+    animation: confirmationMessageOut 0.5s forwards;
+}
+
+@keyframes confirmationMessageIn {
+    from {
+        bottom: -100px;
+    }
+
+    to {
+        bottom: 30px;
+    }
+}
+
+@keyframes confirmationMessageOut {
+    from {
+        bottom: 30px;
+    }
+
+    to {
+        bottom: -100px;
     }
 }
 
