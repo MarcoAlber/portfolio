@@ -29,8 +29,8 @@ export class ContactComponent {
     formData.append('message', messageField.value);
     this.sendData(formData);
 
-    this.resetContactForm();
     this.confirmationMessage();
+    this.resetContactForm();
   }
 
   async sendData(formData: FormData) {

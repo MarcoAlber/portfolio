@@ -4,9 +4,15 @@
             <span>&lt;/&gt; M<span class="a-letter">a</span>rco Al<span class="b-letter">b</span>er</span>
         </a>
     </div>
-    <div class="menu-links">
-        <a routerLink="/" fragment='aboutme'>Aboutme</a>
-        <a routerLink="/" fragment='skills'>Skills</a>
-        <a routerLink="/" fragment='portfolio'>Portfolio</a>
+    <div [ngClass]="{'menu-links-responsive': openMenu}" class="menu-links">
+        <a (click)="closeMenu()" routerLink="/" fragment='aboutme'>About me</a>
+        <a (click)="closeMenu()" routerLink="/" fragment='skills'>Skills</a>
+        <a (click)="closeMenu()" routerLink="/" fragment='portfolio'>Portfolio</a>
+        <a (click)="closeMenu()" class="contact-link" routerLink="/" fragment='contact'>Contact</a>
+    </div>
+    <div (click)="toggleMenu()" [ngClass]="{'closeMenu': openMenu}" class="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 </header>

@@ -11,6 +11,10 @@ body {
     color: white;
     overflow-y: auto;
 
+    @media(min-width: 691px) {
+        overflow-y: auto !important;
+    }
+
     &::-webkit-scrollbar {
         width: 10px;
 

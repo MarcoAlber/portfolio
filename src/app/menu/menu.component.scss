@@ -31,6 +31,10 @@ header {
     }
 }
 
+.dp-none {
+    display: none;
+}
+
 .menu-links {
     display: flex;
     gap: 46px;
@@ -53,26 +57,97 @@ header {
     header {
         padding: 37px 25px;
     }
-
-    .logo {
-        display: none;
-    }
-
-    /* .menu-links {
-        display: none;
-    }*/
 }
 
 @media (orientation: landscape) and (max-width: 900px) {
     header {
         padding: 37px 25px;
     }
+}
 
-    .logo {
+@media(max-width: 690px) {
+    .menu-links {
         display: none;
     }
 
-    /*.menu-links {
+    .menu-links-responsive {
+        position: fixed;
+        top: 109px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(20, 29, 47, 0.9);
+    }
+
+    .burger-menu {
+        width: 30px;
+        position: relative;
+
+        span {
+            border-radius: 10px;
+            position: absolute;
+            border: 1px solid white;
+            width: calc(100% - 2px);
+
+            &:nth-child(1) {
+                top: 4px;
+                transition: all 225ms ease-in-out;
+            }
+
+            &:nth-child(2) {
+                top: 16.5px;
+                transition: all 225ms ease-in-out;
+            }
+
+            &:nth-child(3) {
+                top: 29px;
+                transition: all 225ms ease-in-out;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.closeMenu {
+    span {
+        &:nth-child(1) {
+            transform: translateY(12px) rotate(-45deg);
+            transition: all 225ms ease-in-out;
+        }
+
+        &:nth-child(2) {
+            opacity: 0;
+            transition: all 225ms ease-in-out;
+        }
+
+        &:nth-child(3) {
+            transform: translateY(-12px) rotate(45deg);
+            transition: all 225ms ease-in-out;
+        }
+    }
+}
+
+@media(min-width: 691px) {
+    .burger-menu {
         display: none;
-    }*/
+    }
+
+    .menu-links-responsive {
+        display: none;
+    }
+
+    .contact-link {
+        display: none;
+    }
+
+    .menu-links {
+        display: flex !important;
+    }
 }

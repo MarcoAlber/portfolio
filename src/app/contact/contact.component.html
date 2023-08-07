@@ -14,7 +14,8 @@
             <form (ngSubmit)="sendMail()" [formGroup]="contactForm">
                 <div class="input-container">
                     <input [ngClass]="{'green-border': contactForm.controls['nameInput'].valid}" minlength="3"
-                        formControlName="nameInput" placeholder="Your name" type="text" name="name">
+                        onkeydown="return /[a-z, ]/i.test(event.key)" formControlName="nameInput"
+                        placeholder="Your name" type="text" name="name">
                     <div *ngIf="contactForm.controls['nameInput'].invalid &&
                         (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)">
                         <span class="required-informations"
