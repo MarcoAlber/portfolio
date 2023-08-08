@@ -132,7 +132,6 @@ $profile-image-height: 705px;
 .scroll-container {
     rotate: 90deg;
     display: flex;
-    align-items: center;
     flex-direction: row;
     font-size: 20px;
     gap: 10px;
@@ -219,11 +218,11 @@ $profile-image-height: 705px;
     }
 
     .name-text {
-        font-size: 49px;
+        font-size: 47px;
     }
 
     .frontend-text {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .profile-container {
@@ -253,7 +252,8 @@ $profile-image-height: 705px;
     }
 }
 
-@media (orientation: portrait) {
+@media (orientation: portrait),
+(max-width: 630px) {
     $profile-image-height: 500px;
 
     .profile-image-container {
@@ -370,7 +370,11 @@ $profile-image-height: 705px;
     }
 
     .profile-container {
-        justify-content: flex-start;
+        padding-bottom: 50px;
+    }
+
+    .background-curved {
+        height: 640px;
     }
 
     .profile-image-container {
@@ -392,11 +396,11 @@ $profile-image-height: 705px;
     }
 
     .name-text {
-        font-size: 35px;
+        font-size: 32px;
     }
 
     .frontend-text {
-        font-size: 23px;
+        font-size: 19px;
     }
 
     .email-adress {
