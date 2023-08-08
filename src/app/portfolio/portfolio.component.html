@@ -5,6 +5,8 @@
 </div>
 <span class="portfolio-text">This page is a sample of my work - please feel free to try them out.</span>
 <div class="all-projects-container">
+    <div class="portfolioBg"><img src="assets/img/portfolioBg.png"></div>
+    <div class="secondPortfolioBg"><img src="assets/img/secondPortfolioBg.png"></div>
     <div *ngFor="let project of projects; let i = index">
         <div class="portfolio-project-container" [ngStyle]="{ 'flex-direction': i % 2 !== 0 ? 'row-reverse' : 'row' }">
             <div class="project-image-container"><img src="assets/img/{{ project.image }}"></div>

@@ -1,6 +1,20 @@
 .contact-container {
+    position: relative;
     margin-top: 134px;
     padding-top: 109px;
+}
+
+.contactBg {
+    position: absolute;
+    bottom: -223px;
+    left: -150px;
+    height: 700px;
+    z-index: -1;
+
+    img {
+        height: 100%;
+        opacity: 0.3;
+    }
 }
 
 .contact-headline-container {
@@ -270,6 +284,12 @@ textarea {
 (orientation: landscape) and (max-width: 900px) {
     .contact-container {
         margin-top: 0;
+    }
+
+    .contactBg {
+        bottom: -168px;
+        left: -30px;
+        height: 270px;
     }
 
     .text-form-container {
