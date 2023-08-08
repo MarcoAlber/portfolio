@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class MenuComponent {
   openMenu = false;
 
+  /** toggles the responsive menu button and the scrollbar */
   toggleMenu() {
     if (!this.openMenu) {
       this.openMenu = true;
@@ -19,6 +20,7 @@ export class MenuComponent {
     }
   }
 
+  /** closes the menu after clicking on a section in the responsive menu */
   closeMenu() {
     this.openMenu ? this.toggleMenu() : false;
   }

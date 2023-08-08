@@ -136,6 +136,7 @@ $profile-image-height: 705px;
     flex-direction: row;
     font-size: 20px;
     gap: 10px;
+    z-index: 1;
 
     div {
         rotate: 270deg;

@@ -16,6 +16,7 @@ export class ContactComponent {
     messageTextarea: new FormControl('', [Validators.required, Validators.minLength(10)])
   });
 
+  /** takes the value of the inputfields and sends the FormData to the mail adress */
   sendMail() {
     let nameField: any = this.contactForm.controls['nameInput'];
     let mailField: any = this.contactForm.controls['emailInput'];
@@ -33,6 +34,10 @@ export class ContactComponent {
     this.resetContactForm();
   }
 
+  /**
+   * sends the FormData into the php file and sends the mail
+   * @param formData = FormData with values of the inputfields
+   */
   async sendData(formData: FormData) {
     await fetch('https://marco-alber.developerakademie.net/portfolio/send_mail/send_mail.php',
       {
@@ -41,11 +46,13 @@ export class ContactComponent {
       });
   }
 
+  /** resets and enables the contact form */
   resetContactForm() {
     this.contactForm.reset();
     this.contactForm.enable();
   }
 
+  /** changes booleans to display the confirmation message */
   confirmationMessage() {
     this.formSending = true;
     this.alreadySend = true;

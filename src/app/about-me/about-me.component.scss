@@ -19,6 +19,18 @@ h1 {
     justify-content: space-between;
 }
 
+.aboutMeBg {
+    position: absolute;
+    top: -170px;
+    right: 0;
+    height: 600px;
+
+    img {
+        height: 100%;
+        opacity: 0.4;
+    }
+}
+
 .about-me-text-container {
     display: flex;
     flex-direction: column;
@@ -47,6 +59,7 @@ h1 {
 .image-round-container {
     display: flex;
     align-items: center;
+    z-index: 1;
 
     img {
         border-radius: 100%;
@@ -89,12 +102,23 @@ h1 {
 
 @media (orientation: portrait) {
     .about-me-container {
-        margin: 29px 25px 0;
+        margin-left: 0;
+        margin-top: 29px;
+        padding-left: 25px;
+        padding-right: 25px;
         justify-content: center;
     }
 
     .about-me-text-container {
         width: 471px;
+    }
+
+    .aboutMeSection {
+        z-index: 1;
+    }
+
+    .aboutMeBg {
+        top: 70px;
     }
 
     .image-round-container {
@@ -115,8 +139,18 @@ h1 {
 
 @media (orientation: landscape) and (max-width: 900px) {
     .about-me-container {
-        margin: 0 25px;
+        margin: 0;
+        padding-left: 25px;
+        padding-right: 25px;
         justify-content: center;
+    }
+
+    .aboutMeBg {
+        top: 70px;
+    }
+
+    .aboutMeSection {
+        z-index: 1;
     }
 
     .image-round-container {

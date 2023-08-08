@@ -21,8 +21,8 @@
                         <span class="required-informations"
                             *ngIf="contactForm.controls['nameInput'].errors?.['required']">Your name is required.</span>
                         <span class="required-informations"
-                            *ngIf="contactForm.controls['nameInput'].errors?.['minlength']">Your name has to be three
-                            letters.</span>
+                            *ngIf="contactForm.controls['nameInput'].errors?.['minlength']">Your name must be at least 3
+                            letters long.</span>
                     </div>
                     <div class="warning-image" *ngIf="contactForm.controls['nameInput'].invalid &&
                     (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)"><img
