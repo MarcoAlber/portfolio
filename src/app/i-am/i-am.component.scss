@@ -365,12 +365,13 @@ $profile-image-height: 705px;
 }
 
 @media (orientation: landscape) and (max-width: 900px) {
-    .i-am-container {
-        padding: 109px 25px 0;
+    .profile-container {
+        justify-content: flex-start;
+        padding-top: 7dvh;
     }
 
-    .profile-container {
-        padding-bottom: 50px;
+    .i-am-container {
+        padding: 109px 25px 0;
     }
 
     .background-curved {
@@ -392,15 +393,15 @@ $profile-image-height: 705px;
 
 @media (orientation: landscape) and (max-width: 800px) {
     .i-am-text {
-        font-size: 23px;
+        font-size: 25px;
     }
 
     .name-text {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     .frontend-text {
-        font-size: 19px;
+        font-size: 25px;
     }
 
     .email-adress {

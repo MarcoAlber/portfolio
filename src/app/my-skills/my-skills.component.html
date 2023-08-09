@@ -1,6 +1,7 @@
 <div id="skills" class="my-skills-container">
     <div class="my-skills-images-container">
-        <div *ngFor="let s of skills" class="my-skills-skill-container">
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="250" *ngFor="let s of skills"
+            class="my-skills-skill-container">
             <img src="assets/img/{{ s }}.png">
             <span>{{ s }}</span>
         </div>
