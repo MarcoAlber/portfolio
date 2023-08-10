@@ -28,7 +28,7 @@ export class PortfolioComponent {
       "name": "Pokédex",
       "languages": "JavaScript | HTML | CSS | API",
       "description": "A simple library based on the PokéAPI that provides and catalogs Pokémon information.",
-      "image": "pokemon.png",
+      "image": "pokedex.png",
       "url": "https://marco-alber.developerakademie.net/pokedex/",
       "github": "https://github.com/MarcoAlber/pokedex"
     },
@@ -44,7 +44,7 @@ export class PortfolioComponent {
       "name": "My website",
       "languages": "Angular | TypeScript | HTML | SCSS",
       "description": "My own website to represent myself and my best projects.",
-      "image": "RingOfFire.png",
+      "image": "myWebsite.png",
       "github": "https://github.com/MarcoAlber/portfolio"
     }
   ];

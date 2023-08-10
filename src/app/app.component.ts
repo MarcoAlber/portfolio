@@ -9,6 +9,7 @@ import * as AOS from "aos";
 export class AppComponent implements OnInit {
   title = 'portfolio';
 
+  /** loads the AOS library on init */
   ngOnInit() {
     AOS.init({
       duration: 1000,
