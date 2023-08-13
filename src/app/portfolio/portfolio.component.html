@@ -10,14 +10,17 @@
     <div *ngFor="let project of projects; let i = index">
         <div data-aos="fade-down" data-aos-easing="linear" class="portfolio-project-container"
             [ngStyle]="{ 'flex-direction': i % 2 !== 0 ? 'row-reverse' : 'row' }">
-            <div class="project-image-container"><img src="assets/img/{{ project.image }}"></div>
+            <div class="project-image-container"
+                [ngStyle]="{ 'justify-content': i % 2 !== 0 ? 'flex-end' : 'flex-start' }"><img
+                    src="assets/img/{{ project.image }}"></div>
             <div class="project-text-container">
-                <div class="project-text">
+                <div class="project-text" [ngStyle]="{ 'text-align': i % 2 !== 0 ? 'end' : 'start' }">
                     <span class="project-name">{{ project.name }}</span>
                     <span class="project-languages">{{ project.languages }}</span>
                     <span class="project-description">{{ project.description }}</span>
                 </div>
-                <div class="project-buttons-container">
+                <div class="project-buttons-container"
+                    [ngStyle]="{ 'justify-content': i % 2 !== 0 ? 'flex-end' : 'flex-start' }">
                     <div class="live-test" [ngStyle]="{ 'display': project.name === 'My website' ? 'none' : 'flex' }">
                         <a href="{{ project.url }}" target="_blank">
                             <span>Live test</span>

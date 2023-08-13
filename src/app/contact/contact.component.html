@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <div class="form-button-container">
-                    <button class="form-button" title="Please fill out the contact form."
+                    <button class="form-button" [title]="contactForm.valid ? '' : 'Please fill out the contact form.'"
                         [disabled]="!contactForm.valid"><span>Send message</span></button>
                 </div>
             </form>
@@ -86,5 +86,9 @@
         <img src="assets/img/go_up_button.png">
     </a>
 </div>
-<div class="confirmation-message-in" *ngIf="formSending || alreadySend"
-    [ngClass]="{'confirmation-message-out': !formSending}"><span>The message has been sent.</span></div>
+<div class="confirmation-message-in"
+    [ngClass]="{'confirmation-error-message-in': errorInfo, 'confirmation-message-out': !formSending}"
+    *ngIf="formSending || alreadySend">
+    <span *ngIf="!errorInfo">The message has been sent.</span>
+    <span *ngIf="errorInfo">Something went wrong, please try again.</span>
+</div>

@@ -9,6 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ContactComponent {
   formSending = false;
   alreadySend = false;
+  errorInfo: any = false;
 
   contactForm = new FormGroup({
     nameInput: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -18,6 +19,7 @@ export class ContactComponent {
 
   /** takes the value of the inputfields and sends the FormData to the mail adress */
   sendMail() {
+    this.errorInfo = false;
     let nameField: any = this.contactForm.controls['nameInput'];
     let mailField: any = this.contactForm.controls['emailInput'];
     let messageField: any = this.contactForm.controls['messageTextarea'];
@@ -35,15 +37,25 @@ export class ContactComponent {
   }
 
   /**
-   * sends the FormData into the php file and sends the mail
+   * sends the FormData into the php file and sends the mail, else error message
    * @param formData = FormData with values of the inputfields
    */
   async sendData(formData: FormData) {
-    await fetch('https://marco-alber.developerakademie.net/portfolio/send_mail/send_mail.php',
-      {
-        method: "post",
-        body: formData
-      });
+    try {
+      await fetch('https://marco-alber.developerakademie.net/portfolio/send_mail/send_mail.php',
+        {
+          method: "post",
+          body: formData
+        })
+    }
+    catch (e) {
+      this.errorMessage();
+    }
+  }
+
+  /** display the error message after sendData error */
+  errorMessage() {
+    this.errorInfo = true;
   }
 
   /** resets and enables the contact form */
@@ -58,6 +70,6 @@ export class ContactComponent {
     this.alreadySend = true;
     setTimeout(() => {
       this.formSending = false;
-    }, 2500);
+    }, 3500);
   }
 }

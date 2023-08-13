@@ -237,9 +237,14 @@ textarea {
     border-radius: 10px;
     background-color: #FA7902;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     animation: confirmationMessageIn 0.5s forwards;
+}
+
+.confirmation-error-message-in {
+    background-color: #FF4747;
 }
 
 .confirmation-message-out {

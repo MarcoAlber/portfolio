@@ -68,16 +68,20 @@
 .portfolio-project-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    gap: 35px;
     margin: 0 100px;
 }
 
 .project-image-container {
     width: 620px;
     height: 339px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
     img {
-        width: 100%;
+        width: 85%;
     }
 }
 
@@ -150,13 +154,17 @@
     }
 }
 
-@media(max-width: 1350px) {
+@media(max-width: 1375px) {
     .project-text-container {
         width: 380px;
     }
 
     .project-buttons-container {
         gap: 50px;
+    }
+
+    .project-image-container {
+        width: 490px;
     }
 }
 
@@ -170,6 +178,7 @@
     }
 
     .project-image-container {
+        width: 430px;
         height: unset;
     }
 }
@@ -185,7 +194,12 @@
     }
 
     .project-image-container {
+        justify-content: center !important;
         height: 339px;
+
+        img {
+            width: 100%;
+        }
     }
 
     .all-projects-container {
@@ -212,20 +226,23 @@
     }
 
     .portfolio-text {
-        margin: 25px 25px 35px;
+        margin: 25px 25px 85px;
     }
 
     .project-text-container {
+        width: 340px;
+        justify-content: center !important;
         align-items: center;
     }
 
     .project-buttons-container {
-        gap: 86px;
+        width: 340px;
+        justify-content: space-around !important;
     }
 
     .project-text {
         align-items: center;
-        text-align: center;
+        text-align: center !important;
     }
 
     .portfolio-project-container {
@@ -271,7 +288,7 @@
     }
 }
 
-@media (orientation: landscape) and (max-width: 900px) {
+@media (orientation: landscape) and (max-width: 1050px) {
     .portfolio-project-container {
         margin: 0 25px;
     }
