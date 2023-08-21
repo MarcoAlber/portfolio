@@ -170,7 +170,7 @@ $profile-image-height: 705px;
     }
 
     .i-am-container {
-        padding: 109px 100px 0 47px;
+        padding: 109px 100px 0 100px;
     }
 }
 
@@ -273,7 +273,7 @@ $profile-image-height: 705px;
 }
 
 @media (orientation: portrait),
-(max-width: 630px) {
+(max-width: 670px) {
     $profile-image-height: 500px;
 
     .profile-image-container {
@@ -438,5 +438,33 @@ $profile-image-height: 705px;
 
     .link-line {
         width: calc(50vw - 90px - 61px);
+    }
+}
+
+@media(min-width: 1921px) {
+    .background-position {
+        width: calc(100% - 10px);
+    }
+
+    .contact-links-container {
+        padding-top: 0;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 1580px) {
+    .profile-image-container {
+        height: 580px;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 1921px) {
+    .profile-image-container {
+        height: 620px;
+    }
+}
+
+@media(min-width: 1931px) {
+    .background-position {
+        width: 1920px;
     }
 }

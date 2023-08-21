@@ -307,3 +307,10 @@
         bottom: -300px;
     }
 }
+
+@media(min-width: 1921px) {
+    .portfolio-headline-line-right {
+        right: calc(50% - 960px);
+        width: calc(960px - 194.5px - 36px);
+    }
+}

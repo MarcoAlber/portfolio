@@ -151,3 +151,9 @@ header {
         display: flex !important;
     }
 }
+
+@media(min-width: 1921px) {
+    header {
+        margin: 0 calc(50% - 960px);
+    }
+}
