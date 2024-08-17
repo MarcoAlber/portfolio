@@ -2,7 +2,7 @@
 
 ########### CONFIG ###############
 
-$recipient = 'm.alber@onlinehome.de'; # Bitte hier deine E-Mail angeben
+$recipient = 'hello@marco-alber.net'; # Bitte hier deine E-Mail angeben
 
 ########### CONFIG END ###########
 
@@ -40,7 +40,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case ("POST"): //Send the email;
 
         $subject = "Contact From " . $_POST['name'];
-        $headers = "From:  noreply@developerakademie.com";
+        $headers = "From:  noreply@marco-alber.net";
 
         mail($recipient, $subject, $_POST['mail'], $_POST['message'], $headers);
 

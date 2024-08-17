@@ -42,7 +42,7 @@ export class ContactComponent {
    */
   async sendData(formData: FormData) {
     try {
-      await fetch('https://marco-alber.developerakademie.net/portfolio/send_mail/send_mail.php',
+      await fetch('https://marco-alber.net/send_mail/send_mail.php',
         {
           method: "post",
           body: formData
